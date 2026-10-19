@@ -1,4 +1,4 @@
-/* Layout: sticky green header, white nav bar, one rounded hero carousel, then a two-column body (products | services + promo). Flowers are drawn as SVG, so the shop needs no photos. */
+/* Layout: sticky green header, white nav bar, one rounded hero carousel, then a two-column body (products | services + promo). Flowers are drawn as SVG.*/
 :root{
   --bg:#faf8f4; --surface:#ffffff; --surface-2:#f2f0e9; --ink:#25322a; --ink-2:#5d6b61; --line:#e8e5dc;
   --green:#52745a; --green-d:#416149; --on-green:#ffffff; --green-ink:#3e6046;
