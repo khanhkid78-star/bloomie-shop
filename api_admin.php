@@ -35,7 +35,7 @@ elseif ($action === 'update_product' && $_SERVER['REQUEST_METHOD'] === 'POST') {
         echo json_encode(["status" => "error", "message" => $e->getMessage()]);
     }
 }
-// Xóa hoaabc
+// Xóa hoa
 elseif ($action === 'delete_product' && $_SERVER['REQUEST_METHOD'] === 'POST') {
     $id = $data['product_id'];
     try {
