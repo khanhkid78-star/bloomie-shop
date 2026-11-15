@@ -3019,3 +3019,156 @@ html {
     }
   }
 }
+/* ===== BỔ SUNG CHO CLERK & ADMIN + FIX ANIMATION GIỎ HÀNG ===== */
+
+/* Tắt animation nhảy liên tục khi chỉnh số lượng trong giỏ hàng */
+.ln {
+    animation: none !important;
+}
+.qty button:hover,
+.qty button:active {
+    transform: none !important;
+}
+
+/* Điều chỉnh header khi ở chế độ nhân viên / quản trị */
+body.role-staff .search,
+body.role-staff #btnFav,
+body.role-staff #btnCart {
+    display: none !important;
+}
+body.role-staff .hdr .wrap {
+    grid-template-columns: auto 1fr auto;
+}
+body.role-staff .acts {
+    grid-column: 3;
+}
+
+.role-pill {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 999px;
+    font-size: 11.5px;
+    font-weight: 600;
+    background: var(--pink);
+    color: var(--ink);
+    text-transform: uppercase;
+    letter-spacing: .04em;
+}
+
+/* Lưới thống kê Dashboard */
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-bottom: 20px;
+}
+.kpi-card {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 18px;
+}
+.kpi-card span {
+    display: block;
+    font-size: 13px;
+    color: var(--ink-2);
+    margin-bottom: 6px;
+}
+.kpi-card b {
+    font-size: 24px;
+    font-family: var(--font-display);
+    color: var(--green-ink);
+}
+.kpi-card.warn b {
+    color: var(--price);
+}
+
+/* Bảng dữ liệu quản trị */
+.tbl-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--surface);
+}
+.tbl {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13.5px;
+}
+.tbl th,
+.tbl td {
+    padding: 12px 14px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: middle;
+}
+.tbl th {
+    background: var(--surface-2);
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+}
+.tbl tr:last-child td {
+    border-bottom: 0;
+}
+.tbl tr:hover td {
+    background: rgba(82, 116, 90, .04);
+}
+
+.btn-sm {
+    padding: 6px 12px;
+    font-size: 12.5px;
+    border-radius: 8px;
+}
+.btn-danger {
+    background: var(--badge);
+    color: #fff;
+}
+
+/* Biểu đồ cột thống kê doanh thu Admin */
+.chart-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 14px;
+    height: 190px;
+    padding: 20px 10px 8px;
+    border-bottom: 1px solid var(--line);
+    margin-top: 12px;
+}
+.chart-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    height: 100%;
+    justify-content: flex-end;
+}
+.chart-col .bar-v {
+    width: 100%;
+    max-width: 48px;
+    background: var(--green-d);
+    border-radius: 6px 6px 0 0;
+    min-height: 4px;
+    transition: height .4s ease;
+}
+.chart-col small {
+    font-size: 11px;
+    color: var(--ink-2);
+    text-align: center;
+}
+.chart-col span {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink);
+}
+
+/* Chi tiết đơn mở rộng trong bảng Clerk/Admin */
+.ord-detail-box {
+    background: var(--bg);
+    padding: 12px 14px;
+    border-radius: 10px;
+    margin-top: 8px;
+    font-size: 13px;
+    border: 1px dashed var(--line);
+}
